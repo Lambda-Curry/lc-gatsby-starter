@@ -1,5 +1,9 @@
 {
   "private": true,
+  "scripts": {
+    "develop": "yarn workspace gatsby-site run develop",
+    "clean": "find . -name \"node_modules\" -type d -prune -exec rm -rf '{}' + && yarn"
+  },
   "workspaces": [
     "gatsby-site",
     "gatsby-theme"

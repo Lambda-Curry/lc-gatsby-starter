@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '~@lambdacurry/component-library/dist/all.css';
+
+body {
+  font-family: var(--lc-font-family-sans);
+}
+
+main {
+  padding: 16px;
+
+  @media (min-width: 640px) {
+    padding: 24px;
+  }
+}
+
+code {
+  &::before,
+  &::after {
+    content: '' !important;
+  }
+}
