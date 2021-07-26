@@ -1,7 +1,6 @@
 # LC Gatsby Starter
 
-The LC Gatsby Starter was setup using Gatsby's Yarn Workspace Guide
-https://www.gatsbyjs.com/blog/2019-05-22-setting-up-yarn-workspaces-for-theme-development/
+The LC Gatsby Starter was setup using [Gatsby's Yarn Workspace Guide](https://www.gatsbyjs.com/blog/2019-05-22-setting-up-yarn-workspaces-for-theme-development/).
 
 ## Thoughts:
 
