@@ -6,7 +6,7 @@ const {
   MANIFEST_SHORT_TITLE,
   MANIFEST_THEME_COLOR = '#15171A',
   MANIFEST_BG_COLOR = '#e9e9e9',
-  MANIFEST_SITE_ICON = 'src/images/gatsby-icon.png',
+  MANIFEST_SITE_ICON = 'src/images/icons/gatsby-icon.png',
   POSTS_PER_PAGE = 12
 } = require('dotenv').config({
   path: `.env.${activeEnv}`

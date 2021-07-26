@@ -1,0 +1,8 @@
+.navigation {
+  height: 100vh;
+  position: fixed;
+  width: 300px;
+  overflow-y: scroll;
+  @apply border-r;
+  @apply p-4;
+}
