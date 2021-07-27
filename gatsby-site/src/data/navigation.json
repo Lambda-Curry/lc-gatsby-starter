@@ -1,0 +1,13 @@
+{
+  "navigation": [
+    {
+      "link": "/",
+      "title": "Getting Started"
+    },
+    {
+      "link": "/pages",
+      "title": "Ways to Create Pages"
+    },
+    { "link": "/images", "title": "Working with Images" }
+  ]
+}

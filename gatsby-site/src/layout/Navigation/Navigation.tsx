@@ -1,21 +1,38 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 import './navigation.scss';
 
+export interface NavigationData {
+  dataJson: {
+    navigation: { link: string; title: string }[];
+  };
+}
+
+const query = graphql`
+  query NavigationData {
+    dataJson {
+      navigation {
+        link
+        title
+      }
+    }
+  }
+`;
+
 export const Navigation: React.FC<{}> = () => {
+  const {
+    dataJson: { navigation }
+  } = useStaticQuery(query);
+
   return (
     <nav className="sm:prose-sm md:prose navigation">
       <h1>Lambda Curry Gatsby Starter</h1>
       <ul>
-        <li>
-          <Link to="/">Getting Started</Link>
-        </li>
-        <li>
-          <Link to="/pages">Ways to Create Pages</Link>
-        </li>
-        <li>
-          <Link to="/images">Working with Images</Link>
-        </li>
+        {navigation.map(({ link, title }) => (
+          <li key={title}>
+            <Link to={link}>{title}</Link>
+          </li>
+        ))}
       </ul>
     </nav>
   );

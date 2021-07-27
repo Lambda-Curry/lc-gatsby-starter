@@ -31,7 +31,7 @@ const Home: React.FC<{}> = () => {
           plugin, but will also break the build if they do not exist.
         </p>
 
-        <h3>Step 4</h3>
+        <h3>Step 5</h3>
         <p>
           Try running <code className="p-1 bg-gray-200 rounded">npm run develop</code> or{' '}
           <code className="p-1 bg-gray-200 rounded">yarn develop</code> to see your first page.
