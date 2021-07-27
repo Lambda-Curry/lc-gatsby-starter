@@ -3,10 +3,13 @@
   "scripts": {
     "develop": "yarn workspace gatsby-site run develop",
     "build": "yarn workspace gatsby-site run build",
-    "clean": "find . -name \"node_modules\" -type d -prune -exec rm -rf '{}' + && yarn"
+    "clean": "yarn workspace gatsby-site run clean && find . -name \"node_modules\" -type d -prune -exec rm -rf '{}' + && yarn"
   },
-  "workspaces": [
-    "gatsby-site",
-    "gatsby-theme"
-  ]
+  "workspaces": {
+    "packages": [
+      "gatsby-site",
+      "gatsby-theme",
+      "gatsby-theme-directus"
+    ]
+  }
 }
