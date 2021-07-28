@@ -10,10 +10,8 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@directus/gatsby-source-directus": "^9.0.0-rc.85",
     "@lambdacurry/component-library": "^2.3.0",
     "@lambdacurry/gatsby-theme": "^1.0.0",
-    "@lambdacurry/gatsby-theme-directus": "^1.0.0",
     "@tailwindcss/typography": "^0.4.1",
     "gatsby": "^3.10.2",
     "gatsby-awesome-pagination": "^0.3.8",

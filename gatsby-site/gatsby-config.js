@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`
+});
+
 module.exports = {
   plugins: [
     `gatsby-plugin-image`,
@@ -8,13 +12,13 @@ module.exports = {
           title: 'Test site'
         }
       }
-    },
-    {
-      resolve: `@lambdacurry/gatsby-theme-directus`,
-      options: {
-        url: process.env.DIRECTUS_URL,
-        authToken: process.env.DIRECTUS_AUTH_TOKEN
-      }
     }
+    // {
+    //   resolve: `@lambdacurry/gatsby-theme-directus`,
+    //   options: {
+    //     url: process.env.DIRECTUS_URL,
+    //     authToken: process.env.DIRECTUS_AUTH_TOKEN
+    //   }
+    // }
   ]
 };

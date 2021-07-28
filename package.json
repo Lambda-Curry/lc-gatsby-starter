@@ -10,6 +10,14 @@
       "gatsby-site",
       "gatsby-theme",
       "gatsby-theme-directus"
+    ],
+    "nohoist": [
+      "**/gatsby",
+      "gatsby/**",
+      "**/gatsby-*",
+      "gatsby-*/**",
+      "**/*-gatsby",
+      "*-gatsby/**"
     ]
   }
 }
