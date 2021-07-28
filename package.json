@@ -7,6 +7,7 @@
   },
   "workspaces": [
     "gatsby-site",
-    "gatsby-theme"
+    "gatsby-theme",
+    "gatsby-theme-directus"
   ]
 }
