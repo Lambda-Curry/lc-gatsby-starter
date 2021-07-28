@@ -1,0 +1,9 @@
+{
+  "editor.defaultFormatter": "editorconfig.editorconfig",
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "cSpell.words": ["lambdacurry", "directus"]
+}
