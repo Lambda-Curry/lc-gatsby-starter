@@ -32,4 +32,8 @@ indent_size = 2
 indent_style = tab
 
 [Dockerfile]
+<<<<<<< HEAD
 indent_size = 2
+=======
+indent_size = 2
+>>>>>>> gatsby-theme-directus

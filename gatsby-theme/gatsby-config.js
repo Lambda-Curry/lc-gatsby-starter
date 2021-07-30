@@ -1,4 +1,4 @@
-const { getSiteConfig } = require(`./lib/site-config`);
+const { getSiteConfig } = require(`./lib/siteConfig`);
 
 module.exports = options => {
   const siteConfig = getSiteConfig(options);
