@@ -12,6 +12,13 @@ module.exports = {
           title: 'Test site'
         }
       }
+    },
+    {
+      resolve: `@lambdacurry/gatsby-theme-directus`,
+      options: {
+        url: process.env.DIRECTUS_URL,
+        authToken: process.env.DIRECTUS_AUTH_TOKEN
+      }
     }
   ]
 };
