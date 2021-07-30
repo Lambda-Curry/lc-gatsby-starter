@@ -12,8 +12,6 @@ module.exports = {
           title: 'Test site'
         }
       }
-<<<<<<< HEAD
-=======
     },
     {
       resolve: `@lambdacurry/gatsby-theme-directus`,
@@ -21,7 +19,6 @@ module.exports = {
         url: process.env.DIRECTUS_URL,
         authToken: process.env.DIRECTUS_AUTH_TOKEN
       }
->>>>>>> gatsby-theme-directus
     }
   ]
 };
