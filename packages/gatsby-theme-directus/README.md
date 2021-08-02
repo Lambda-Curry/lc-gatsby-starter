@@ -53,7 +53,7 @@
 
           {page.sections.length > 0 &&
             page.sections.map((section, index) => {
-              return <section>{/* ... */}</section>;
+              return <section key={index}>{/* ... */}</section>;
             })}
         </Layout>
       );
