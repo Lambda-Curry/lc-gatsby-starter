@@ -17,6 +17,8 @@
 
     Add the theme to the `plugins` array with the appropriate options.
 
+    _Note: All options are **required**. If you do not provide a page template, no pages will be created._
+
     ```js
     module.exports = {
       plugins: [
@@ -52,8 +54,8 @@
           <h1>{page.title}</h1>
 
           {page.sections.length > 0 &&
-            page.sections.map((section, index) => {
-              return <section key={index}>{/* ... */}</section>;
+            page.sections.map(section => {
+              return <section key={section.id}>{/* ... */}</section>;
             })}
         </Layout>
       );
@@ -65,7 +67,10 @@
       query ($id: ID!) {
         directus {
           page: page_by_id(id: $id) {
-            ...PageFields
+            title
+            sections {
+              id
+            }
           }
         }
       }

@@ -6,11 +6,11 @@ const Page: React.FC<{ data: any }> = ({ data }) => {
 
   return (
     <>
-      <h1>{page.title}</h1>
+      <h1>{page.hero_title}</h1>
 
       {page.sections.length > 0 &&
-        page.sections.map((section, index) => {
-          return <section key={index}>{/* ... */}</section>;
+        page.sections.map(section => {
+          return <section key={section.id}>{/* ... */}</section>;
         })}
     </>
   );
@@ -22,7 +22,11 @@ export const pageQuery = graphql`
   query ($id: ID!) {
     directus {
       page: page_by_id(id: $id) {
-        ...PageFields
+        id
+        hero_title
+        sections {
+          id
+        }
       }
     }
   }
