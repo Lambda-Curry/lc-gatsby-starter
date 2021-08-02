@@ -29,7 +29,7 @@
             url: `https://cms.example.com`, // Replace w/ the url for your hosted Directus instance
             authToken: `myAuthTokenExample`, // Replace w/ your Directus auth token
             templatePaths: {
-              page: `${__dirname}/src/templates/page.tsx`
+              page: `${__dirname}/src/templates/page.tsx` // Replace w/ the actual path to your page template
             }
           }
         }
