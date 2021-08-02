@@ -1,7 +1,7 @@
 {
   "name": "@lambdacurry/gatsby-theme",
   "version": "1.0.0",
-  "main": "gatsby-config.js",
+  "main": "index.js",
   "license": "MIT",
   "keywords": [
     "gatsby",
