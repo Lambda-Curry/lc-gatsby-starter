@@ -1,6 +1,6 @@
 {
   "name": "@lambdacurry/gatsby-theme-directus",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "index.js",
   "license": "MIT",
   "repository": "https://github.com/lambda-curry/lc-gatsby-starter/tree/master/packages/gatsby-theme-directus",
@@ -9,8 +9,9 @@
     "theme"
   ],
   "scripts": {
-    "build": "gatsby build",
     "develop": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
   "dependencies": {
