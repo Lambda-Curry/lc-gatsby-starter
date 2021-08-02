@@ -1,12 +1,14 @@
 {
   "private": true,
   "scripts": {
-    "develop": "yarn workspace gatsby-site run develop",
-    "build": "yarn workspace gatsby-site run build",
-    "clean": "find . -name \"node_modules\" -type d -prune -exec rm -rf '{}' + && yarn"
+    "develop": "yarn workspace example run develop",
+    "dev": "yarn develop",
+    "start": "yarn develop",
+    "build": "yarn workspace example run build",
+    "clean": "yarn workspace example run clean && find . -name \"node_modules\" -type d -prune -exec rm -rf '{}' + && yarn"
   },
   "workspaces": [
-    "gatsby-site",
-    "gatsby-theme"
+    "packages/*",
+    "example"
   ]
 }
