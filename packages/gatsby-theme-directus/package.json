@@ -1,8 +1,9 @@
 {
   "name": "@lambdacurry/gatsby-theme-directus",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "license": "MIT",
+  "repository": "https://github.com/lambda-curry/lc-gatsby-starter/tree/master/packages/gatsby-theme-directus",
   "keywords": [
     "gatsby",
     "theme"
