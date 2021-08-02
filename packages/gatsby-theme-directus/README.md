@@ -81,7 +81,7 @@
 
     Run your site using `yarn develop`.
 
-    Once the pages have been created, the plugin will output some messages to the terminal, including a list of pages that were created
+    Once the pages have been created, the plugin will output some messages to the terminal, including a list of pages that were created.
 
     ```shell
     success @lambdacurry/gatsby-theme-directus: 3 pages created successfully.
