@@ -1,54 +1,81 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
-
+# Gatsby Theme - Directus
 ## 🚀 Quick start
 
-1.  **Create a Gatsby site.**
+1.  **Install the theme.**
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
-
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
-
-2.  **Start developing.**
-
-    Navigate into your new site’s directory and start it up.
+    Install the theme via `npm` or `yarn`.
 
     ```shell
-    cd my-gatsby-site/
-    npm run develop
+    npm install @lambdacurry/gatsby-theme-directus
+
+    # or
+
+    yarn add @lambdacurry/gatsby-theme-directus
     ```
 
-3.  **Open the code and start customizing!**
+2.  **Add the theme to your `gatsby-config.js`**
 
-    Your site is now running at http://localhost:8000!
+    Add the theme to the `plugins` array with the appropriate options.
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+    ```js
+    module.exports = {
+      plugins: [
+        // ...other plugins
+        {
+          resolve: `@lambdacurry/gatsby-theme-directus`,
+          options: {
+            url: `https://cms.example.com`, // Replace w/ the url for your hosted Directus instance
+            authToken: `myAuthTokenExample`, // Replace w/ your Directus auth token
+            templatePaths: {
+              page: `${__dirname}/src/templates/page.tsx`
+            }
+          }
+        }
+      ]
+    };
+    ```
 
-4.  **Learn more**
+3.  **Create the page template.**
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+    Create a page template at the path you provided in the plugin options (i.e., `src/templates/page.tsx`).
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+    ```tsx
+    import React from `react`;
+    import { graphql } from `gatsby`;
+    import { Layout } from `../components/Layout`;
 
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+    const Page: React.FC<{ data: any }> = ({ data }) => {
+      const { page } = data.directus;
 
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+      return (
+        <Layout>
+          <h1>{page.title}</h1>
 
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+          {page.sections.length > 0 &&
+            page.sections.map((section, index) => {
+              return <section>{/* ... */}</section>;
+            })}
+        </Layout>
+      );
+    };
 
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+    export default Page;
 
-## 🚀 Quick start (Gatsby Cloud)
+    export const pageQuery = graphql`
+      query ($id: ID!) {
+        directus {
+          page: page_by_id(id: $id) {
+            ...PageFields
+          }
+        }
+      }
+    `;
+    ```
 
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
+4.  **Run your site and start customizing!**
 
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+    Run your site using `yarn develop`.
+
+    Your site should now be running at http://localhost:8000!
+
+    Edit your page template to see your site update in real-time!
