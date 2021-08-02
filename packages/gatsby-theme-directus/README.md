@@ -81,6 +81,16 @@
 
     Run your site using `yarn develop`.
 
-    Your site should now be running at http://localhost:8000!
+    Once the pages have been created, the plugin will output some messages to the terminal, including a list of pages that were created
+
+    ```shell
+    success @lambdacurry/gatsby-theme-directus: 3 pages created successfully.
+    success @lambdacurry/gatsby-theme-directus: Pages created at:
+      - /about-us
+      - /
+      - /test
+    ```
+
+    Visit one of the pages in your browser (i.e., http://localhost:8000/about-us).
 
     Edit your page template to see your site update in real-time!
