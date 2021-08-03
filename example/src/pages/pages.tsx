@@ -3,7 +3,7 @@ import { Layout } from '../layout/Layout';
 
 const Pages: React.FC<{}> = () => {
   return (
-    <Layout>
+    <Layout title="Create Pages">
       <main className="sm:prose-sm md:prose">
         <h2>Ways to Create Pages</h2>
         <h3>1. gatsby-plugin-page-creator</h3>

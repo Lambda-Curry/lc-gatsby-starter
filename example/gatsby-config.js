@@ -11,7 +11,7 @@ module.exports = {
       resolve: `@lambdacurry/gatsby-theme`,
       options: {
         siteMetaData: {
-          title: `Lambda Curry Gatsby Starter`,
+          titleTemplate: `%s | Lambda Curry Gatsby Starter`,
           description: `Documentation site for Lambda Curry's Gatsby Starter`
         }
       }

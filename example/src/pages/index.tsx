@@ -3,7 +3,7 @@ import { Layout } from '../layout/Layout';
 
 const Home: React.FC<{}> = () => {
   return (
-    <Layout>
+    <Layout title="Getting Started">
       <main className="sm:prose-sm md:prose">
         <h2>Getting Started</h2>
         <h3>Step 1</h3>

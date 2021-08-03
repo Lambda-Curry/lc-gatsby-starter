@@ -4,7 +4,7 @@ import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
 
 const Images: React.FC<{}> = () => {
   return (
-    <Layout>
+    <Layout title="Working with Images">
       <main className="sm:prose-sm md:prose">
         <h2>Working with Images</h2>
         <h3>1. Static Images</h3>

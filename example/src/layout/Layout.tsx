@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { MetaData } from '@lambdacurry/gatsby-theme/src/components';
 import { Navigation } from './Navigation/Navigation';
 
@@ -8,12 +8,10 @@ interface LayoutProps {
   title?: string;
 }
 
-export const Layout: React.FC<LayoutProps> = ({ children }) => {
-  return (
-    <div className="layout">
-      <MetaData />
-      <Navigation />
-      <div className="layout-content">{children}</div>
-    </div>
-  );
-};
+export const Layout: FC<LayoutProps> = ({ children, title }) => (
+  <div className="layout">
+    <MetaData title={title} />
+    <Navigation />
+    <div className="layout-content">{children}</div>
+  </div>
+);
