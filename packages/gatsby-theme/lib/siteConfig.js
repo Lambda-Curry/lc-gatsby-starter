@@ -18,11 +18,11 @@ const defaultSiteConfig = {
     twitterImage: '',
     twitterTitle: '',
     twitterDescription: '',
-    favicon: 'src/images/gatsby-icon.png',
+    favicon: `${__dirname}/../src/images/gatsby-icon.png`,
     postsPerPage: 12
   },
   manifest: {
-    icon: 'src/images/icons/gatsby-icon.png',
+    icon: `${__dirname}/../src/images/gatsby-icon.png`,
     name: 'LC Gatsby Starter',
     short_name: 'LC Gatsby Starter',
     start_url: '/',
