@@ -6,7 +6,8 @@
   "repository": "https://github.com/lambda-curry/lc-gatsby-starter/tree/master/packages/gatsby-theme-directus",
   "keywords": [
     "gatsby",
-    "theme"
+    "theme",
+    "directus"
   ],
   "scripts": {
     "develop": "gatsby develop",
