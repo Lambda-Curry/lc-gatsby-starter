@@ -10,8 +10,9 @@ module.exports = {
     {
       resolve: `@lambdacurry/gatsby-theme`,
       options: {
-        metaData: {
-          title: 'Test site'
+        siteMetaData: {
+          title: `Lambda Curry Gatsby Starter`,
+          description: `Documentation site for Lambda Curry's Gatsby Starter`
         }
       }
     },

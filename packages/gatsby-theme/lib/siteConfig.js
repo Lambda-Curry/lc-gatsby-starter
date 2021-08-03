@@ -1,6 +1,7 @@
 const defaultSiteConfig = {
   siteMetaData: {
     lang: 'en',
+    charSet: 'utf-8',
     siteUrl: 'http://localhost:8000',
     title: 'LC Gatsby Starter',
     description:

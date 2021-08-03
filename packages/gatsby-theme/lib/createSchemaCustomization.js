@@ -5,22 +5,27 @@ const createSchemaCustomization = ({ actions }) => {
   const typeDefs = `
     type SiteSiteMetadata implements Node {
       lang: String
+      charSet: String
       favicon: String
       titleTemplate: String
       baseBodyClassName: String
+
       title: String
       description: String
       author: String
       image: String
+
       ogImage: String
       ogTitle: String
       ogDescription: String
-      twitterSite: String
-      twitterCreator: String
-      twitterHandle: String
+
       twitterImage: String
       twitterTitle: String
       twitterDescription: String
+      twitterSite: String
+      twitterCreator: String
+      twitterHandle: String
+
       siteUrl: String
       postsPerPage: Int
     }

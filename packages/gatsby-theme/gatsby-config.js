@@ -1,7 +1,7 @@
 const { getSiteConfig } = require(`./lib/siteConfig`);
 
-module.exports = options => {
-  const siteConfig = getSiteConfig(options);
+module.exports = pluginOptions => {
+  const siteConfig = getSiteConfig(pluginOptions);
 
   return {
     siteMetadata: siteConfig.siteMetaData,
