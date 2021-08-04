@@ -18,7 +18,7 @@ module.exports = {
           description: `Documentation site for Lambda Curry's Gatsby Starter`
         },
         manifest: {
-          nam: siteTitle,
+          name: siteTitle,
           short_name: siteTitle
         }
       }
