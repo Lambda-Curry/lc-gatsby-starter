@@ -25,7 +25,7 @@ module.exports = {
     {
       resolve: `@lambdacurry/gatsby-theme`,
       options: {
-        siteMetadata: { /* Add site meta data options here */ },
+        siteMetadata: { /* Add site metadata options here */ },
         manifest: { /* Add manifest options here */ },
       }
     }
@@ -77,7 +77,7 @@ const defaultSiteConfig = {
 
 ## Use the `Metadata` component
 
-To use the `Metadata` component, add it to your own layout component, and override any of the site meta data options by passing them directly as props.
+To use the `Metadata` component, add it to your own layout component, and override any of the site metadata options by passing them directly as props.
 
 ```tsx
 import React, { FC } from 'react';
