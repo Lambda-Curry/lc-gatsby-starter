@@ -16,7 +16,7 @@ yarn add @lambdacurry/gatsby-theme
 
 Add the theme to the `plugins` array with the appropriate options.
 
-_Note: All options are **required**. If you do not provide a page template, no pages will be created._
+_Note: Any `siteMetadata` or `manifest` options you do not provide will be set to the default below._
 
 ```js
 module.exports = {
