@@ -16,7 +16,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@directus/gatsby-source-directus": "^9.0.0-rc.87"
+    "@directus/gatsby-source-directus": "^9.0.0-rc.88"
   },
   "peerDependencies": {
     "gatsby": "^3.10.2",
