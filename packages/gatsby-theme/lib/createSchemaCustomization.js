@@ -8,6 +8,7 @@ const createSchemaCustomization = ({ actions }) => {
       charSet: String
       favicon: String
       titleTemplate: String
+      defaultTitle: String
       baseBodyClassName: String
 
       title: String
