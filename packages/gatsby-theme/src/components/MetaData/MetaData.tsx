@@ -21,6 +21,7 @@ export const MetaData: FC<MetaDataProps> = ({ bodyClassName, children, ...props 
     charSet,
     favicon,
     titleTemplate,
+    defaultTitle,
     baseBodyClassName,
     title,
     description,
@@ -36,8 +37,10 @@ export const MetaData: FC<MetaDataProps> = ({ bodyClassName, children, ...props 
   } = useMetaData(props);
 
   return (
-    <Helmet htmlAttributes={{ lang }} title={title} titleTemplate={titleTemplate}>
+    <Helmet htmlAttributes={{ lang }} titleTemplate={titleTemplate} defaultTitle={defaultTitle}>
       {charSet && <meta charSet={charSet} />}
+
+      <title>{title}</title>
 
       <body className={classNames(baseBodyClassName, bodyClassName)} />
 

@@ -12,6 +12,9 @@ export const Layout: FC<LayoutProps> = ({ children, title }) => (
   <div className="layout">
     <MetaData title={title} />
     <Navigation />
-    <div className="layout-content">{children}</div>
+    <main className="layout-content sm:prose-sm md:prose">
+      <h2>{title}</h2>
+      {children}
+    </main>
   </div>
 );

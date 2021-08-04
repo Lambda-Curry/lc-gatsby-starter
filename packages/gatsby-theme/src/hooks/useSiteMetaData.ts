@@ -11,6 +11,7 @@ export const useSiteMetadata = (): SiteMetaData => {
             charSet
             favicon
             titleTemplate
+            defaultTitle
             baseBodyClassName
 
             title

@@ -1,13 +1,14 @@
 import { useSiteMetadata } from '.';
 import { MetaDataProps } from '../types';
 
-export const useMetaData = (props: MetaDataProps) => {
+export const useMetaData = (props: MetaDataProps): MetaDataProps => {
   const siteMetadata = useSiteMetadata();
 
   const lang = props.lang || siteMetadata.lang;
   const charSet = props.charSet || siteMetadata.charSet;
   const favicon = props.favicon || siteMetadata.favicon;
   const titleTemplate = props.titleTemplate || siteMetadata.titleTemplate;
+  const defaultTitle = props.defaultTitle || siteMetadata.defaultTitle;
   const baseBodyClassName = props.baseBodyClassName || siteMetadata.baseBodyClassName;
 
   const title = props.title || siteMetadata.title;
@@ -32,6 +33,7 @@ export const useMetaData = (props: MetaDataProps) => {
     charSet,
     favicon,
     titleTemplate,
+    defaultTitle,
     baseBodyClassName,
     title,
     description,

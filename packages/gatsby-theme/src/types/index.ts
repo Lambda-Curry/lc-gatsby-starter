@@ -4,6 +4,7 @@ export interface MetaDataProps {
   favicon?: string;
 
   title?: string;
+  defaultTitle?: string;
   titleTemplate?: string;
   description?: string;
   author?: string;
