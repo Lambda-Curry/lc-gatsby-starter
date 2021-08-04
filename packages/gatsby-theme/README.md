@@ -20,16 +20,16 @@ _Note: All options are **required**. If you do not provide a page template, no p
 
 ```js
 module.exports = {
-    plugins: [
+  plugins: [
     // ...other plugins
     {
-        resolve: `@lambdacurry/gatsby-theme`,
-        options: {
-            siteMetadata: { /* ... */ }, // Add site meta data options
-            manifest: { /* ... */ }, // Add manifest options
-        }
+      resolve: `@lambdacurry/gatsby-theme`,
+      options: {
+        siteMetadata: { /* Add site meta data options here */ },
+        manifest: { /* Add manifest options here */ },
+      }
     }
-    ]
+  ]
 };
 ```
 
@@ -39,13 +39,13 @@ You can modify the `siteMetadata` and `manifest` options. The have the following
 
 ```js
 const defaultSiteConfig = {
-    siteMetadata: {
+  siteMetadata: {
     lang: 'en',
     charSet: 'utf-8',
     siteUrl: 'http://localhost:8000',
     title: '',
     description:
-        'Customized by Lambda Curry - Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
+      'Customized by Lambda Curry - Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
     author: 'Lambda Curry',
     titleTemplate: '% | LC Gatsby Starter',
     defaultTitle: 'LC Gatsby Starter',
@@ -62,8 +62,8 @@ const defaultSiteConfig = {
     twitterDescription: '',
     favicon: `${__dirname}/../src/images/gatsby-icon.png`,
     postsPerPage: 12
-    },
-    manifest: {
+  },
+  manifest: {
     icon: `${__dirname}/../src/images/gatsby-icon.png`,
     name: 'LC Gatsby Starter',
     short_name: 'LC Gatsby Starter',
@@ -71,7 +71,7 @@ const defaultSiteConfig = {
     theme_color: '#15171a',
     background_color: '#e9e9e9',
     display: `minimal-ui`
-    }
+  }
 };
 ```
 
