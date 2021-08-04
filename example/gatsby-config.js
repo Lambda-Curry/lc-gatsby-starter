@@ -12,6 +12,7 @@ module.exports = {
       options: {
         siteMetaData: {
           titleTemplate: `%s | Lambda Curry Gatsby Starter`,
+          defaultTitle: `Lambda Curry Gatsby Starter`,
           description: `Documentation site for Lambda Curry's Gatsby Starter`
         }
       }
