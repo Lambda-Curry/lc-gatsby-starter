@@ -35,7 +35,7 @@ module.exports = {
 
 ## Configure the theme options
 
-You can modify the `siteMetadata` and `manifest` options. The have the following defaults:
+You can modify the `siteMetadata` and `manifest` options. They have the following defaults:
 
 ```js
 const defaultSiteConfig = {
