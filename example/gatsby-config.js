@@ -4,14 +4,22 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`
 });
 
+const siteTitle = 'Lambda Curry Gatsby Starter';
+
 module.exports = {
   plugins: [
     `gatsby-plugin-image`,
     {
       resolve: `@lambdacurry/gatsby-theme`,
       options: {
-        metaData: {
-          title: 'Test site'
+        siteMetadata: {
+          titleTemplate: `%s | ${siteTitle}`,
+          defaultTitle: siteTitle,
+          description: `Documentation site for Lambda Curry's Gatsby Starter`
+        },
+        manifest: {
+          name: siteTitle,
+          short_name: siteTitle
         }
       }
     },

@@ -1,12 +1,16 @@
+const defaultSiteTitle = 'LC Gatsby Starter';
+
 const defaultSiteConfig = {
-  siteMetaData: {
+  siteMetadata: {
     lang: 'en',
+    charSet: 'utf-8',
     siteUrl: 'http://localhost:8000',
-    title: 'LC Gatsby Starter',
+    title: '',
     description:
       'Customized by Lambda Curry - Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
     author: 'Lambda Curry',
-    titleTemplate: '',
+    titleTemplate: `% | ${defaultSiteTitle}`,
+    defaultTitle: defaultSiteTitle,
     baseBodyClassName: '',
     image: '',
     ogImage: '',
@@ -23,8 +27,8 @@ const defaultSiteConfig = {
   },
   manifest: {
     icon: `${__dirname}/../src/images/gatsby-icon.png`,
-    name: 'LC Gatsby Starter',
-    short_name: 'LC Gatsby Starter',
+    name: defaultSiteTitle,
+    short_name: defaultSiteTitle,
     start_url: '/',
     theme_color: '#15171a',
     background_color: '#e9e9e9',
@@ -34,9 +38,9 @@ const defaultSiteConfig = {
 
 const getSiteConfig = options => {
   return {
-    siteMetaData: {
-      ...defaultSiteConfig.siteMetaData,
-      ...options.siteMetaData
+    siteMetadata: {
+      ...defaultSiteConfig.siteMetadata,
+      ...options.siteMetadata
     },
     manifest: {
       ...defaultSiteConfig.manifest,

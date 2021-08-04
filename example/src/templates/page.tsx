@@ -1,18 +1,29 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { graphql } from 'gatsby';
+import { Layout } from '../layout/Layout';
 
-const Page: React.FC<{ data: any }> = ({ data }) => {
+export interface PageProps {
+  data: {
+    directus: {
+      page: {
+        id: number;
+        hero_title: string;
+        sections: Array<{ id: number }>;
+      };
+    };
+  };
+}
+
+const Page: FC<PageProps> = ({ data }) => {
   const { page } = data.directus;
 
   return (
-    <>
-      <h1>{page.hero_title}</h1>
-
+    <Layout title={page.hero_title}>
       {page.sections.length > 0 &&
         page.sections.map(section => {
           return <section key={section.id}>{/* ... */}</section>;
         })}
-    </>
+    </Layout>
   );
 };
 

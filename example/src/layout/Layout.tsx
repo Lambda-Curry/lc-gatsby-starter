@@ -1,22 +1,20 @@
-import React from 'react';
-import { Helmet } from 'react-helmet';
+import React, { FC } from 'react';
+import { Metadata } from '@lambdacurry/gatsby-theme/src/components';
 import { Navigation } from './Navigation/Navigation';
+
 import './layout.scss';
 
 interface LayoutProps {
   title?: string;
 }
 
-export const Layout: React.FC<LayoutProps> = ({ children, title = 'Lambda Curry Gatsby Starter' }) => {
-  return (
-    <div className="layout">
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>{title}</title>
-        <meta name="description" content="Documentation site for Lambda Curry's Gatsby Starter" />
-      </Helmet>
-      <Navigation />
-      <div className="layout-content">{children}</div>
-    </div>
-  );
-};
+export const Layout: FC<LayoutProps> = ({ children, title }) => (
+  <div className="layout">
+    <Metadata title={title} />
+    <Navigation />
+    <main className="layout-content sm:prose-sm md:prose">
+      <h2>{title}</h2>
+      {children}
+    </main>
+  </div>
+);
