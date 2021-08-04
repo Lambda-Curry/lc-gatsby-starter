@@ -1,7 +1,7 @@
 import { useSiteMetadata } from '.';
-import { MetaDataProps } from '../types';
+import { MetadataProps } from '../types';
 
-export const useMetaData = (props: MetaDataProps): MetaDataProps => {
+export const useMetadata = (props: MetadataProps): MetadataProps => {
   const siteMetadata = useSiteMetadata();
 
   const lang = props.lang || siteMetadata.lang;

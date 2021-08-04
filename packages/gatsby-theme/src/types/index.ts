@@ -1,4 +1,4 @@
-export interface MetaDataProps {
+export interface MetadataProps {
   lang?: string;
   charSet?: string;
   favicon?: string;
@@ -25,7 +25,7 @@ export interface MetaDataProps {
   bodyClassName?: string;
 }
 
-export interface SiteMetaData extends Omit<MetaDataProps, 'bodyClassName'> {
+export interface SiteMetadata extends Omit<MetadataProps, 'bodyClassName'> {
   siteUrl?: string;
   postsPerPage?: number;
 }

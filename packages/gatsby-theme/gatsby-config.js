@@ -4,7 +4,7 @@ module.exports = pluginOptions => {
   const siteConfig = getSiteConfig(pluginOptions);
 
   return {
-    siteMetadata: siteConfig.siteMetaData,
+    siteMetadata: siteConfig.siteMetadata,
     flags: { PRESERVE_WEBPACK_CACHE: true, PRESERVE_FILE_DOWNLOAD_CACHE: true },
     plugins: [
       {

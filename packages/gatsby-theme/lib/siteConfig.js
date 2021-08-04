@@ -1,5 +1,5 @@
 const defaultSiteConfig = {
-  siteMetaData: {
+  siteMetadata: {
     lang: 'en',
     charSet: 'utf-8',
     siteUrl: 'http://localhost:8000',
@@ -36,9 +36,9 @@ const defaultSiteConfig = {
 
 const getSiteConfig = options => {
   return {
-    siteMetaData: {
-      ...defaultSiteConfig.siteMetaData,
-      ...options.siteMetaData
+    siteMetadata: {
+      ...defaultSiteConfig.siteMetadata,
+      ...options.siteMetadata
     },
     manifest: {
       ...defaultSiteConfig.manifest,

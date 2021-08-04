@@ -1,2 +1,2 @@
-export * from './useSiteMetaData';
-export * from './useMetaData';
+export * from './useSiteMetadata';
+export * from './useMetadata';

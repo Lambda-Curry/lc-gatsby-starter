@@ -12,13 +12,34 @@ npm install @lambdacurry/gatsby-theme
 yarn add @lambdacurry/gatsby-theme
 ```
 
+## Add the theme to your `gatsby-config.js`
+
+Add the theme to the `plugins` array with the appropriate options.
+
+_Note: All options are **required**. If you do not provide a page template, no pages will be created._
+
+```js
+module.exports = {
+    plugins: [
+    // ...other plugins
+    {
+        resolve: `@lambdacurry/gatsby-theme`,
+        options: {
+            siteMetadata: { /* ... */ }, // Add site meta data options
+            manifest: { /* ... */ }, // Add manifest options
+        }
+    }
+    ]
+};
+```
+
 ## Configure the theme options
 
 You can modify the `siteMetadata` and `manifest` options. The have the following defaults:
 
 ```js
 const defaultSiteConfig = {
-    siteMetaData: {
+    siteMetadata: {
     lang: 'en',
     charSet: 'utf-8',
     siteUrl: 'http://localhost:8000',
@@ -54,17 +75,17 @@ const defaultSiteConfig = {
 };
 ```
 
-## Use the `MetaData` component
+## Use the `Metadata` component
 
-To use the `MetaData` component, add it to your own layout component, and override any of the site meta data options by passing them directly as props.
+To use the `Metadata` component, add it to your own layout component, and override any of the site meta data options by passing them directly as props.
 
 ```tsx
 import React, { FC } from 'react';
-import { MetaData } from '@lambdacurry/gatsby-theme/src/components';
+import { Metadata } from '@lambdacurry/gatsby-theme/src/components';
 
 export const Layout: FC<{ title: string }> = ({ children, title }) => (
   <div className="layout">
-    <MetaData title={title} />
+    <Metadata title={title} />
 
     <main>
       <h2>{title}</h2>

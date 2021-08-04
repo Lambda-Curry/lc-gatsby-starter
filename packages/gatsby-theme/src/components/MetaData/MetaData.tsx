@@ -10,12 +10,12 @@ import { Helmet } from 'react-helmet';
 import classNames from 'classnames';
 
 // Hooks
-import { useMetaData } from '../../hooks/useMetaData';
+import { useMetadata } from '../../hooks/useMetadata';
 
 // Types
-import { MetaDataProps } from '../../types';
+import { MetadataProps } from '../../types';
 
-export const MetaData: FC<MetaDataProps> = ({ bodyClassName, children, ...props }) => {
+export const Metadata: FC<MetadataProps> = ({ bodyClassName, children, ...props }) => {
   const {
     lang,
     charSet,
@@ -34,7 +34,7 @@ export const MetaData: FC<MetaDataProps> = ({ bodyClassName, children, ...props 
     twitterImage,
     twitterTitle,
     twitterDescription
-  } = useMetaData(props);
+  } = useMetadata(props);
 
   return (
     <Helmet htmlAttributes={{ lang }} titleTemplate={titleTemplate} defaultTitle={defaultTitle}>

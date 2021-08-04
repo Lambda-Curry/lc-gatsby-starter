@@ -1,1 +1,1 @@
-export * from './MetaData/MetaData';
+export * from './Metadata/Metadata';

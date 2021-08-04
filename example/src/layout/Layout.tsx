@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { MetaData } from '@lambdacurry/gatsby-theme/src/components';
+import { Metadata } from '@lambdacurry/gatsby-theme/src/components';
 import { Navigation } from './Navigation/Navigation';
 
 import './layout.scss';
@@ -10,7 +10,7 @@ interface LayoutProps {
 
 export const Layout: FC<LayoutProps> = ({ children, title }) => (
   <div className="layout">
-    <MetaData title={title} />
+    <Metadata title={title} />
     <Navigation />
     <main className="layout-content sm:prose-sm md:prose">
       <h2>{title}</h2>
