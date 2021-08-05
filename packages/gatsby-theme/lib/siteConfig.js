@@ -40,10 +40,14 @@ const getSiteConfig = options => {
   return {
     siteMetadata: {
       ...defaultSiteConfig.siteMetadata,
+      titleTemplate: `%s | ${options.siteName}`,
+      defaultTitle: options.siteName,
       ...options.siteMetadata
     },
     manifest: {
       ...defaultSiteConfig.manifest,
+      name: options.siteName,
+      short_name: options.siteName,
       ...options.manifest
     }
   };
