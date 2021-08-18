@@ -13,6 +13,7 @@ const createPages = async ({ graphql, actions, reporter }, pluginOptions) => {
     {
       directus {
         page {
+          status
           id
           url
         }
@@ -31,17 +32,23 @@ const createPages = async ({ graphql, actions, reporter }, pluginOptions) => {
 
   // Create pages
   if (pages.length) {
-    pages.forEach(page => {
-      createPage({
-        path: page.url, // Do we need this to be `slug`?
-        component: path.resolve(templatePaths.page),
-        context: {
-          // Data passed to context is available
-          // in page queries as GraphQL variables.
-          id: page.id
-        }
+    pages
+      .filter(page => {
+        if (page.status === 'archived') return false;
+        if (process.env.NODE_ENV === 'production') return page.status === 'published';
+        return true;
+      })
+      .forEach(page => {
+        createPage({
+          path: page.url, // Do we need this to be `slug`?
+          component: path.resolve(templatePaths.page),
+          context: {
+            // Data passed to context is available
+            // in page queries as GraphQL variables.
+            id: page.id
+          }
+        });
       });
-    });
 
     reporter.success(`${THEME_NAME}: ${pages.length} pages created successfully.`);
     reporter.success(`${THEME_NAME}: Pages created at: ${pages.map(page => `\n  - ${page.url}`).join('')}
