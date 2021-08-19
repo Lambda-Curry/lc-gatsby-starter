@@ -3,7 +3,7 @@ const { THEME_NAME } = require('./constants');
 
 const createPages = async ({ graphql, actions, reporter }, pluginOptions) => {
   const { createPage } = actions;
-  const { templatePaths = {} } = pluginOptions;
+  const { templatePaths = {}, filterPages = () => true } = pluginOptions;
 
   // Bail if we don't have any pages or posts.
   if (!templatePaths.page) return reporter.warn(`${THEME_NAME}: No page template provided - skipping page creation.`);
@@ -38,6 +38,7 @@ const createPages = async ({ graphql, actions, reporter }, pluginOptions) => {
         if (process.env.NODE_ENV === 'production') return page.status === 'published';
         return true;
       })
+      .filter(filterPages)
       .forEach(page => {
         createPage({
           path: page.url, // Do we need this to be `slug`?
