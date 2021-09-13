@@ -6,8 +6,7 @@ const defaultSiteConfig = {
     charSet: 'utf-8',
     siteUrl: 'http://localhost:8000',
     title: '',
-    description:
-      'Customized by Lambda Curry - Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
+    description: '',
     author: 'Lambda Curry',
     titleTemplate: `% | ${defaultSiteTitle}`,
     defaultTitle: defaultSiteTitle,
