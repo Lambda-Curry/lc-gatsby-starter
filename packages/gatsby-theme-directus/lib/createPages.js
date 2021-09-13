@@ -3,7 +3,7 @@ const { THEME_NAME } = require('./constants');
 
 const createPages = async ({ graphql, actions, reporter }, pluginOptions) => {
   const { createPage } = actions;
-  const { templatePaths = {} } = pluginOptions;
+  const { templatePaths = {}, filterPages = () => true } = pluginOptions;
 
   // Bail if we don't have any pages or posts.
   if (!templatePaths.page) return reporter.warn(`${THEME_NAME}: No page template provided - skipping page creation.`);
@@ -13,6 +13,7 @@ const createPages = async ({ graphql, actions, reporter }, pluginOptions) => {
     {
       directus {
         page {
+          status
           id
           url
         }
@@ -31,17 +32,24 @@ const createPages = async ({ graphql, actions, reporter }, pluginOptions) => {
 
   // Create pages
   if (pages.length) {
-    pages.forEach(page => {
-      createPage({
-        path: page.url, // Do we need this to be `slug`?
-        component: path.resolve(templatePaths.page),
-        context: {
-          // Data passed to context is available
-          // in page queries as GraphQL variables.
-          id: page.id
-        }
+    pages
+      .filter(page => {
+        if (page.status === 'archived') return false;
+        if (process.env.NODE_ENV === 'production') return page.status === 'published';
+        return true;
+      })
+      .filter(filterPages)
+      .forEach(page => {
+        createPage({
+          path: page.url, // Do we need this to be `slug`?
+          component: path.resolve(templatePaths.page),
+          context: {
+            // Data passed to context is available
+            // in page queries as GraphQL variables.
+            id: page.id
+          }
+        });
       });
-    });
 
     reporter.success(`${THEME_NAME}: ${pages.length} pages created successfully.`);
     reporter.success(`${THEME_NAME}: Pages created at: ${pages.map(page => `\n  - ${page.url}`).join('')}
