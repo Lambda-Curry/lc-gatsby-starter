@@ -12,11 +12,12 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@lambdacurry/component-library": "^2.3.0",
-    "@lambdacurry/gatsby-theme": "^1.1.0",
-    "@lambdacurry/gatsby-theme-directus": "^1.0.6",
-    "gatsby": "^3.10.2",
-    "gatsby-plugin-image": "^1.10.1",
+    "@lambdacurry/component-library": "^2.7.4",
+    "@lambdacurry/gatsby-theme": "^1.1.4",
+    "@lambdacurry/gatsby-theme-directus": "^1.0.9",
+    "@lambdacurry/gatsby-theme-shopify": "^1.0.0",
+    "gatsby": "^3.13.0",
+    "gatsby-plugin-image": "^1.13.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   }

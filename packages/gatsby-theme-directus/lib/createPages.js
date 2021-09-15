@@ -44,8 +44,7 @@ const createPages = async ({ graphql, actions, reporter }, pluginOptions) => {
     });
 
     reporter.success(`${THEME_NAME}: ${pages.length} pages created successfully.`);
-    reporter.success(`${THEME_NAME}: Pages created at: ${pages.map(page => `\n  - ${page.url}`).join('')}
-    `);
+    reporter.success(`${THEME_NAME}: Pages created at: ${pages.map(page => `\n  - ${page.url}`).join('')}`);
   }
 };
 

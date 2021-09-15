@@ -14,7 +14,7 @@ export interface PageProps {
   };
 }
 
-const Page: FC<PageProps> = ({ data }) => {
+const Product: FC<PageProps> = ({ data }) => {
   const { page } = data.directus;
 
   return (
@@ -27,7 +27,7 @@ const Page: FC<PageProps> = ({ data }) => {
   );
 };
 
-export default Page;
+export default Product;
 
 export const pageQuery = graphql`
   query ($id: ID!) {

@@ -1,13 +1,13 @@
 {
-  "name": "@lambdacurry/gatsby-theme-directus",
-  "version": "1.0.7",
+  "name": "@lambdacurry/gatsby-theme-shopify",
+  "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "repository": "https://github.com/lambda-curry/lc-gatsby-starter/tree/master/packages/gatsby-theme-directus",
+  "repository": "https://github.com/lambda-curry/lc-gatsby-starter/tree/master/packages/gatsby-theme-shopify",
   "keywords": [
     "gatsby",
     "theme",
-    "directus"
+    "shopify"
   ],
   "scripts": {
     "develop": "gatsby develop",
@@ -15,17 +15,20 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
-  "dependencies": {
-    "@directus/gatsby-source-directus": "^9.0.0-rc.92"
-  },
   "peerDependencies": {
     "gatsby": "^3.13.0",
+    "gatsby-plugin-image": "^1.13.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "gatsby": "^3.13.0",
+    "gatsby-plugin-image": "^1.13.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
+  },
+  "dependencies": {
+    "gatsby-source-shopify": "^5.5.0",
+    "shopify-buy": "^2.12.0"
   }
 }
