@@ -5,10 +5,10 @@
   "main": "./build/index.js",
   "license": "MIT",
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
+    "start": "yarn develop",
+    "develop": "gatsby develop -H 0.0.0.0",
     "build": "gatsby build",
-    "serve": "gatsby serve",
+    "serve": "gatsby serve -H 0.0.0.0",
     "clean": "gatsby clean"
   },
   "dependencies": {

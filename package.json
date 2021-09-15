@@ -1,10 +1,11 @@
 {
   "private": true,
   "scripts": {
-    "develop": "yarn workspace example run develop",
     "dev": "yarn develop",
     "start": "yarn develop",
+    "develop": "yarn workspace example run develop",
     "build": "yarn workspace example run build",
+    "serve": "yarn workspace example run serve",
     "clean": "yarn workspace example run clean && find . -name \"node_modules\" -type d -prune -exec rm -rf '{}' + && yarn"
   },
   "workspaces": [
