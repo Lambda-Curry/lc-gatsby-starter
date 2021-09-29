@@ -13,7 +13,6 @@ const generateFileNode = require('./lib/generateFileNode');
 
 exports.pluginOptionsSchema = ({ Joi }) =>
   Joi.object({
-    // Validate that the anonymize option is defined by the user and is a boolean
     storeHash: Joi.string().required().messages({
       'any.required': 'You must provide a BigCommerce store hash.'
     }),
