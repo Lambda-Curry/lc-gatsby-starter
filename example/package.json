@@ -5,6 +5,7 @@
   "main": "./build/index.js",
   "license": "MIT",
   "scripts": {
+    "dev": "yarn develop",
     "start": "yarn develop",
     "develop": "gatsby develop -H 0.0.0.0",
     "build": "gatsby build",
@@ -12,11 +13,12 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@lambdacurry/component-library": "^2.3.0",
-    "@lambdacurry/gatsby-theme": "^1.1.0",
-    "@lambdacurry/gatsby-theme-directus": "^1.0.6",
-    "gatsby": "^3.10.2",
-    "gatsby-plugin-image": "^1.10.1",
+    "@lambdacurry/component-library": "^2.7.5",
+    "@lambdacurry/gatsby-theme": "^1.1.4",
+    "@lambdacurry/gatsby-theme-directus": "^1.0.9",
+    "@lambdacurry/gatsby-source-bigcommerce": "^1.0.0",
+    "gatsby": "^3.14.0",
+    "gatsby-plugin-image": "^1.14.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   }

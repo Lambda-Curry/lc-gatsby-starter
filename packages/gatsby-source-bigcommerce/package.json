@@ -1,13 +1,13 @@
 {
-  "name": "@lambdacurry/gatsby-theme-directus",
-  "version": "1.0.9",
+  "name": "@lambdacurry/gatsby-source-bigcommerce",
+  "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "repository": "https://github.com/lambda-curry/lc-gatsby-starter/tree/master/packages/gatsby-theme-directus",
+  "repository": "https://github.com/lambda-curry/lc-gatsby-starter/tree/master/packages/gatsby-source-bigcommerce",
   "keywords": [
     "gatsby",
-    "theme",
-    "directus"
+    "source",
+    "bigcommerce"
   ],
   "scripts": {
     "dev": "yarn develop",
@@ -16,9 +16,6 @@
     "build": "gatsby build",
     "serve": "gatsby serve -H 0.0.0.0",
     "clean": "gatsby clean"
-  },
-  "dependencies": {
-    "@directus/gatsby-source-directus": "^9.0.0-rc.88"
   },
   "peerDependencies": {
     "gatsby": "^3.14.0",
@@ -29,5 +26,9 @@
     "gatsby": "^3.14.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
+  },
+  "dependencies": {
+    "axios": "^0.21.4",
+    "gatsby-source-filesystem": "^3.14.0"
   }
 }

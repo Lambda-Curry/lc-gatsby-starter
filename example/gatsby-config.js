@@ -1,7 +1,7 @@
 const activeEnv = process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || 'development';
 
 require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`
+  path: `.env.${activeEnv}`
 });
 
 const siteTitle = 'Lambda Curry Gatsby Starter';
@@ -9,6 +9,14 @@ const siteTitle = 'Lambda Curry Gatsby Starter';
 module.exports = {
   plugins: [
     `gatsby-plugin-image`,
+    {
+      resolve: `@lambdacurry/gatsby-source-bigcommerce`,
+      options: {
+        storeHash: process.env.BIGCOMMERCE_STORE_HASH,
+        accessToken: process.env.BIGCOMMERCE_ACCESS_TOKEN,
+        endpoints: ['/catalog/products', '/catalog/categories']
+      }
+    },
     {
       resolve: `@lambdacurry/gatsby-theme`,
       options: {
