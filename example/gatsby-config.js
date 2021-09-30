@@ -14,7 +14,8 @@ module.exports = {
       options: {
         storeHash: process.env.BIGCOMMERCE_STORE_HASH,
         accessToken: process.env.BIGCOMMERCE_ACCESS_TOKEN,
-        endpoints: ['/catalog/products', '/catalog/categories']
+        endpoints: ['/catalog/products', '/catalog/categories'],
+        downloadImages: true
       }
     },
     {

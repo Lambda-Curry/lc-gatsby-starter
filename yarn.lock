@@ -6188,14 +6188,6 @@ gatsby-plugin-react-svg@^3.0.1:
   dependencies:
     svg-react-loader "^0.4.4"
 
-gatsby-plugin-remote-images@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-remote-images/-/gatsby-plugin-remote-images-3.0.0.tgz#63bbba949527eafddef755e0d8891e5ad2c59db9"
-  integrity sha512-pJ2QSHM7SfJvKA+dbCpULNv9ha3DuqF4kKyuLTVDYBUbb3QWBNorXMTazshZsoLwMyER16CS3GIARsLOUkmsaQ==
-  dependencies:
-    gatsby-source-filesystem "^3.4.0"
-    lodash "^4.17.15"
-
 gatsby-plugin-sass@^4.10.0:
   version "4.14.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-sass/-/gatsby-plugin-sass-4.14.0.tgz#739e6309fe424dd88c7004d29e75a687e92a7d02"
@@ -6322,7 +6314,7 @@ gatsby-recipes@^0.25.0:
     xstate "^4.9.1"
     yoga-layout-prebuilt "^1.9.6"
 
-gatsby-source-filesystem@3.14.0, gatsby-source-filesystem@^3.10.0, gatsby-source-filesystem@^3.14.0, gatsby-source-filesystem@^3.4.0:
+gatsby-source-filesystem@3.14.0, gatsby-source-filesystem@^3.10.0, gatsby-source-filesystem@^3.14.0:
   version "3.14.0"
   resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-3.14.0.tgz#ae2b930091a932b33270cb9cc2d9caaf0abc1742"
   integrity sha512-Gg5GGxiWXhjapWMYdXOGk7zp+ajYowS+xNmaDUkL1gH+IQLvE18XbvKh00B/HiFaHm4azJfS2QRrRI/mPTZX+w==
