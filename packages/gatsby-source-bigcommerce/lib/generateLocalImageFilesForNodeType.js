@@ -34,9 +34,11 @@ const generateLocalImageFilesForNodeType = async (gatsbyAPI, nodeType) => {
     }
   };
 
-  if (!nodeTypeToImageFileGeneratorMap[nodeType]) return;
+  const fileGenerator = nodeTypeToImageFileGeneratorMap[nodeType];
 
-  await nodeTypeToImageFileGeneratorMap[nodeType]();
+  if (!fileGenerator) return;
+
+  await fileGenerator();
 };
 
 module.exports = generateLocalImageFilesForNodeType;
