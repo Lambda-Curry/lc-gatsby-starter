@@ -6,10 +6,10 @@ const generateLocalImageFilesForNodeType = async (gatsbyAPI, nodeType) => {
 
   const nodeTypeToImageFileGeneratorMap = {
     [NODE_TYPES.Brand]: async () => {
-      await generateLocalImageFile(gatsbyAPI, node.image_url, `node.image_local_file`);
+      await generateLocalImageFile(gatsbyAPI, node.image_url, `image_local_file`);
     },
     [NODE_TYPES.Category]: async () => {
-      await generateLocalImageFile(gatsbyAPI, node.image_url, `node.image_local_file`);
+      await generateLocalImageFile(gatsbyAPI, node.image_url, `image_local_file`);
     },
     [NODE_TYPES.Product]: async () => {
       const { primary_image } = node;
