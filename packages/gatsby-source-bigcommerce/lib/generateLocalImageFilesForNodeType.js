@@ -29,7 +29,7 @@ const generateLocalImageFilesForNodeType = async (gatsbyAPI, nodeType) => {
       });
 
       node.variants.forEach(async (variant, index) => {
-        await generateLocalImageFile(gatsbyAPI, variant.image_url, `node.variant[${index}].image_local_file`);
+        await generateLocalImageFile(gatsbyAPI, variant.image_url, `variants[${index}].image_local_file`);
       });
     }
   };
