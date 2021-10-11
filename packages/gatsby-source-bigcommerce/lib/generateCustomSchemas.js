@@ -31,7 +31,7 @@ const generateCustomSchemas = (gatsbyAPI, pluginOptions) => {
         page_title: String
         search_keywords: String
         meta_keywords: [String]
-        meta_description: [String]
+        meta_description: String
         layout_file: String
         is_visible: Boolean
         default_product_sort: String
