@@ -1,6 +1,6 @@
 {
   "name": "@lambdacurry/gatsby-source-bigcommerce",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "license": "MIT",
   "repository": "https://github.com/lambda-curry/lc-gatsby-starter/tree/master/packages/gatsby-source-bigcommerce",
