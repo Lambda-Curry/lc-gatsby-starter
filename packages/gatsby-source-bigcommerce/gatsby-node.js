@@ -1,13 +1,9 @@
 const bigCommerce = require('./lib/bigcommerce');
 const { consoleMessage } = require('./lib/helpers');
-const {
-  NODE_TYPES_TYPE_DEFS,
-  ENDPOINTS,
-  ENDPOINTS_TO_NODE_TYPES_MAP,
-  ENDPOINTS_QUERY_PARAMS
-} = require('./lib/constants');
+const { ENDPOINTS, ENDPOINTS_TO_NODE_TYPES_MAP, ENDPOINTS_QUERY_PARAMS } = require('./lib/constants');
 const generateNode = require('./lib/generateNode');
 const generateLocalImageFilesForNodeType = require('./lib/generateLocalImageFilesForNodeType');
+const generateCustomSchemas = require('./lib/generateCustomSchemas');
 
 exports.pluginOptionsSchema = ({ Joi }) =>
   Joi.object({
@@ -68,15 +64,5 @@ exports.onCreateNode = async (gatsbyAPI, pluginOptions) => {
 };
 
 exports.createSchemaCustomization = (gatsbyAPI, pluginOptions) => {
-  const { actions } = gatsbyAPI;
-  const { createTypes } = actions;
-  const { endpoints } = pluginOptions;
-
-  if (!pluginOptions.downloadImages) return;
-
-  createTypes(`
-    ${endpoints.includes(ENDPOINTS.Brand) ? [NODE_TYPES_TYPE_DEFS.Brand] : ''}
-    ${endpoints.includes(ENDPOINTS.Category) ? [NODE_TYPES_TYPE_DEFS.Category] : ''}
-    ${endpoints.includes(ENDPOINTS.Product) ? [NODE_TYPES_TYPE_DEFS.Product] : ''}
-  `);
+  generateCustomSchemas(gatsbyAPI, pluginOptions);
 };
