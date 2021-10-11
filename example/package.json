@@ -16,7 +16,7 @@
     "@lambdacurry/component-library": "^2.7.5",
     "@lambdacurry/gatsby-theme": "^1.1.4",
     "@lambdacurry/gatsby-theme-directus": "^1.0.9",
-    "@lambdacurry/gatsby-source-bigcommerce": "^1.0.0",
+    "@lambdacurry/gatsby-source-bigcommerce": "^1.0.3",
     "gatsby": "^3.14.0",
     "gatsby-plugin-image": "^1.14.0",
     "react": "^17.0.2",

@@ -86,7 +86,7 @@ const generateCustomSchemas = (gatsbyAPI, pluginOptions) => {
         meta_keywords: [String]
         meta_description: String
         view_count: Int
-        preorder_release_date: String
+        preorder_release_date: Date @dateformat
         preorder_message: String
         is_preorder_only: Boolean
         is_price_hidden: Boolean
@@ -107,8 +107,8 @@ const generateCustomSchemas = (gatsbyAPI, pluginOptions) => {
         bulk_pricing_rules: [ProductBulkPricingRule]
         images: [ProductImage]!
         videos: [ProductVideo]
-        date_created: String
-        date_modified: String
+        date_created: Date @dateformat
+        date_modified: Date @dateformat
         base_variant_id: Int
         options: [ProductOption]
         modifiers: [ProductModifier]
@@ -132,7 +132,7 @@ const generateCustomSchemas = (gatsbyAPI, pluginOptions) => {
         local_file_thumbnail: File @link
         local_file_tiny: File @link
         local_file_zoom: File @link
-        date_modified: String
+        date_modified: Date
       }
 
       type ProductVariant {
@@ -209,8 +209,8 @@ const generateCustomSchemas = (gatsbyAPI, pluginOptions) => {
         checkbox_label: String
         date_limited: Boolean
         date_limit_mode: String
-        date_earliest_value: String
-        date_latest_value: String
+        date_earliest_value: Date
+        date_latest_value: Date
         file_types_mode: String
         file_types_supported: [String]
         file_types_other: [String]
@@ -260,8 +260,8 @@ const generateCustomSchemas = (gatsbyAPI, pluginOptions) => {
         checkbox_label: String
         date_limited: Boolean
         date_limit_mode: String
-        date_earliest_value: String
-        date_latest_value: String
+        date_earliest_value: Date @dateformat
+        date_latest_value: Date @dateformat
         file_types_mode: String
         file_types_supported: [String]
         file_types_other: [String]
