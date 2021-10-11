@@ -136,10 +136,10 @@ const generateCustomSchemas = (gatsbyAPI, pluginOptions) => {
       }
 
       type ProductVariant {
-        image_local_file: File @link
         id: Int
         product_id: Int
         sku: String
+        sku_id: Int
         price: Float
         cost_price: Float
         sale_price: Float
@@ -152,11 +152,14 @@ const generateCustomSchemas = (gatsbyAPI, pluginOptions) => {
         fixed_cost_shipping_price: Float
         purchasing_disabled: Boolean
         purchasing_disabled_message: String
-        upc: String
+        image_url: String
+        image_local_file: File @link
         inventory_level: Int
         inventory_warning_level: Int
         bin_picking_number: String
+        upc: String
         mpn: String
+        gtin: String
         option_values: [ProductVariantOptionValue]
         calculated_price: Float
         calculated_weight: Float
@@ -234,6 +237,7 @@ const generateCustomSchemas = (gatsbyAPI, pluginOptions) => {
         type: String
         sort_order: Int
         image_url: String
+        image_local_file: File @link
         name: String
         config: OptionConfig
         option_values: [OptionValue]
