@@ -12,40 +12,9 @@ const ENDPOINTS = {
   Product: '/catalog/products'
 };
 
-const NODE_TYPES_TYPE_DEFS = {
-  Brand: `
-    type ${NODE_TYPES.Brand} implements Node @infer {
-      image_local_file: File @link
-    }
-  `,
-  Category: `
-    type ${NODE_TYPES.Category} implements Node @infer {
-      image_local_file: File @link
-    }
-  `,
-  Product: `
-    type ${NODE_TYPES.Product} implements Node @infer {
-      primary_image: BigCommerceProductImage
-      images: [BigCommerceProductImage]!
-      variants: [BigCommerceProductVariant]!
-    }
-
-    type BigCommerceProductImage {
-      local_file_standard: File @link
-      local_file_thumbnail: File @link
-      local_file_tiny: File @link
-      local_file_zoom: File @link
-    }
-
-    type BigCommerceProductVariant {
-      image_local_file: File @link
-    }
-  `
-};
-
 const ENDPOINTS_QUERY_PARAMS = {
   [ENDPOINTS.Product]: {
-    include: ['primary_image', 'images', 'variants', 'custom_fields', 'modifiers', 'options', 'videos']
+    include: ['images', 'variants', 'custom_fields', 'modifiers', 'options', 'videos']
   }
 };
 
@@ -64,7 +33,6 @@ const NODE_TYPES_TO_ENDPOINTS_MAP = {
 module.exports = {
   NODE_TYPE_PREFIX,
   NODE_TYPES,
-  NODE_TYPES_TYPE_DEFS,
   NODE_TYPES_TO_ENDPOINTS_MAP,
   ENDPOINTS,
   ENDPOINTS_TO_NODE_TYPES_MAP,
