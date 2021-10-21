@@ -14,9 +14,9 @@
   },
   "dependencies": {
     "@lambdacurry/component-library": "^3.0.1",
-    "@lambdacurry/gatsby-theme": "^1.1.4",
-    "@lambdacurry/gatsby-theme-directus": "^1.0.9",
-    "@lambdacurry/gatsby-source-bigcommerce": "^1.0.5",
+    "@lambdacurry/gatsby-theme": "^2.0.0",
+    "@lambdacurry/gatsby-theme-directus": "^2.0.0",
+    "@lambdacurry/gatsby-source-bigcommerce": "^2.0.0",
     "gatsby": "^4.0.0",
     "gatsby-plugin-image": "^2.0.0",
     "react": "^17.0.2",
