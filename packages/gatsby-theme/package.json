@@ -1,6 +1,6 @@
 {
   "name": "@lambdacurry/gatsby-theme",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "main": "index.js",
   "license": "MIT",
   "keywords": [
@@ -30,8 +30,8 @@
     "gatsby-plugin-react-svg": "^3.0.1",
     "gatsby-plugin-sass": "^4.10.0",
     "gatsby-plugin-sharp": "^3.10.2",
+    "gatsby-plugin-svgr": "3.0.0-beta.0",
     "gatsby-source-filesystem": "^3.10.0",
-    "gatsby-source-ghost": "^4.2.4",
     "gatsby-transformer-json": "^3.10.0",
     "gatsby-transformer-sharp": "^3.10.0",
     "node-sass": "^6.0.1",
