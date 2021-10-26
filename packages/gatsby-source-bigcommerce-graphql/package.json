@@ -1,0 +1,36 @@
+{
+  "name": "@lambdacurry/gatsby-source-bigcommerce-graphql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "repository": "https://github.com/lambda-curry/lc-gatsby-starter/tree/master/packages/gatsby-source-bigcommerce",
+  "keywords": [
+    "gatsby",
+    "source",
+    "bigcommerce"
+  ],
+  "scripts": {
+    "dev": "yarn develop",
+    "start": "yarn develop",
+    "develop": "gatsby develop -H 0.0.0.0",
+    "build": "gatsby build",
+    "serve": "gatsby serve -H 0.0.0.0",
+    "clean": "gatsby clean"
+  },
+  "peerDependencies": {
+    "gatsby": "^4.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "gatsby": "^4.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "dependencies": {
+    "axios": "^0.23.0",
+    "gatsby-source-filesystem": "^4.0.0",
+    "gatsby-source-graphql": "^4.0.0",
+    "lodash": "^4.17.21"
+  }
+}

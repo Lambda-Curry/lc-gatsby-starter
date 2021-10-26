@@ -6352,6 +6352,22 @@ gatsby-source-graphql@3.14.0:
     node-fetch "^2.6.1"
     uuid "3.4.0"
 
+gatsby-source-graphql@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-source-graphql/-/gatsby-source-graphql-4.0.0.tgz#c8d6d6356d66e223d2257b16b2f122c79211d7b5"
+  integrity sha512-m6jlFRQO4fnYjQ+H+yugqCkbn3tTk/APB58HaG2R9tudMiQ6Zs3fA+uTZh5fucGbZ2BGbK7/OLZBlUTXL9WN1Q==
+  dependencies:
+    "@babel/runtime" "^7.15.4"
+    "@graphql-tools/links" "^7.1.0"
+    "@graphql-tools/utils" "^7.7.3"
+    "@graphql-tools/wrap" "^7.0.8"
+    apollo-link "1.2.14"
+    apollo-link-http "^1.5.17"
+    dataloader "^2.0.0"
+    gatsby-core-utils "^3.0.0"
+    invariant "^2.2.4"
+    node-fetch "^2.6.1"
+
 gatsby-telemetry@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/gatsby-telemetry/-/gatsby-telemetry-3.0.0.tgz#d3ed8c36742942d97b5639f9cc499d5c24921158"
