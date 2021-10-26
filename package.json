@@ -6,7 +6,7 @@
     "develop": "yarn workspace example run develop",
     "build": "yarn workspace example run build",
     "serve": "yarn workspace example run serve",
-    "clean": "yarn workspace example run clean && find . -name \"node_modules\" -type d -prune -exec rm -rf '{}' + && yarn"
+    "clean": "find . -name \"node_modules\" -type d -prune -exec rm -rf '{}' + && yarn && yarn workspace example run clean"
   },
   "workspaces": [
     "packages/*",
