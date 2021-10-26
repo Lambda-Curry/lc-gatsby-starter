@@ -21,7 +21,7 @@ const Products: FC<PageProps> = ({ data }) => {
 
       <h2>Products</h2>
       {products.map(product => {
-        const gatsbyImageData = getImage(product.images[0].local_file_standard);
+        const gatsbyImageData = product.images.length > 0 ? getImage(product.images[0]?.local_file_standard) : null;
 
         return (
           <div key={product.bigcommerce_id} className="rounded-lg p-8 border border-gray-light">
