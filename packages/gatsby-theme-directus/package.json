@@ -1,6 +1,6 @@
 {
   "name": "@lambdacurry/gatsby-theme-directus",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "main": "index.js",
   "license": "MIT",
   "repository": "https://github.com/lambda-curry/lc-gatsby-starter/tree/master/packages/gatsby-theme-directus",
@@ -21,12 +21,12 @@
     "@directus/gatsby-source-directus": "^9.0.0-rc.98"
   },
   "peerDependencies": {
-    "gatsby": "^4.0.0",
+    "gatsby": "^3.14.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "gatsby": "^4.0.0",
+    "gatsby": "^3.14.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   }
