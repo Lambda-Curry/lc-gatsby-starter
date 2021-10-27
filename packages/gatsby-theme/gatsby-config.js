@@ -7,6 +7,7 @@ module.exports = pluginOptions => {
     siteMetadata: siteConfig.siteMetadata,
     flags: { PRESERVE_WEBPACK_CACHE: true, PRESERVE_FILE_DOWNLOAD_CACHE: true },
     plugins: [
+      `gatsby-plugin-material-ui`, // Preventing style flicker on initial load, will need to upgrade version when MUI is upgrade (https://github.com/gatsbyjs/gatsby/issues/15097)
       {
         resolve: 'gatsby-plugin-page-creator',
         options: {
