@@ -19,6 +19,7 @@
     "@material-ui/styles": "^4.11.4",
     "@tailwindcss/typography": "^0.4.1",
     "autoprefixer": "^10.3.7",
+    "babel-plugin-styled-components": "^1.13.3",
     "gatsby-awesome-pagination": "^0.3.8",
     "gatsby-plugin-client-side-redirect": "^1.1.0",
     "gatsby-plugin-gatsby-cloud": "^2.10.1",
