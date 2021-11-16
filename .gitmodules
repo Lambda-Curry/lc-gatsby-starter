@@ -1,3 +1,0 @@
-[submodule "packages/gatsby-theme-medusa-admin"]
-	path = packages/gatsby-theme-medusa-admin
-	url = git@github.com:medusajs/admin.git
